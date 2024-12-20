@@ -1,0 +1,68 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the header text */
+.header-text {
+    font-size: 70px; /* Increased font size */
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px grey; /* Grey shadow */
+    margin-bottom: 40px; /* Reduced space to move text higher */
+    margin-top: 20px; /* Adds a little top margin */
+}
+
+/* Container for options */
+.option-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Styling for individual option boxes */
+.option-box {
+    background-color: #4CAF50;
+    padding: 30px 40px; /* Equal padding for all options */
+    border-radius: 20px; /* Curved corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+    position: relative; /* Needed for positioning the "Coming Soon" text */
+}
+
+/* Styling for Image Generation box (No Coming Soon) */
+.option-box a {
+    text-decoration: none;
+    color: white; /* White color for the link text */
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.option-box a:hover {
+    color: #45a049; /* Hover effect to change color */
+    text-decoration: underline;
+}
+
+/* Styling for "Coming Soon" text */
+.coming-soon {
+    font-size: 12px;
+    color: white;
+    background-color: #333;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-style: italic;
+    position: absolute;
+    bottom: 10px; /* Position it at the bottom of the box */
+    left: 50%;
+    transform: translateX(-50%);
+}

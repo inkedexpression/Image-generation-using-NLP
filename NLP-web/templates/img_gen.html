@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Generation</title>
+    <link rel="stylesheet" type="text/css" href="static/css/img_gen.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Generation</h1>
+
+        <form action="/perform_img_gen" method="post">
+            <label for="img_gen_text">Type your text here:</label><br><br>
+            <textarea name="img_gen_text" id="img_gen_text" rows="4" cols="50" required></textarea><br><br>
+            <input type="submit" value="Generate Image">
+        </form>
+
+        {% if image_path %}
+            <h2>Your Generated Image:</h2>
+            <!-- Display the generated image -->
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='generated_image.png') }}" alt="Generated Image">
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
